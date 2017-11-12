@@ -6,7 +6,7 @@ from kik.messages import messages_from_json, TextMessage
 app = Flask(__name__)
 kik = KikApi("rpg.sim", "51f887c9-2538-42b9-b458-411bd383a42f")
 
-kik.set_configuration(Configuration(webhook="localhost"))
+kik.set_configuration(Configuration(webhook="http://kik-bot-testingstuff.193b.starter-ca-central-1.openshiftapps.com/incoming"))
 
 @app.route('/incoming', methods=['POST'])
 def incoming():
